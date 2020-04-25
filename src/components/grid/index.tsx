@@ -12,7 +12,6 @@ const Grid: FC = () => {
             {Children.toArray(
               [...Array(9)].map((_, colIndex) => (
                 <Block rowIndex={rowIndex} colIndex={colIndex} />
-                // <div></div>
               ))
             )}
           </Row>
