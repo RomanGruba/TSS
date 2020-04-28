@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import { Container } from "./styles";
 import { Dispatch, AnyAction } from "redux";
 
@@ -27,7 +28,7 @@ const Block: FC<IProps> = ({ colIndex, rowIndex }) => {
   const dispatch = useDispatch<Dispatch<AnyAction>>();
 
   function handleClick() {
-    dispatch(selectBlock([rowIndex, colIndex]));
+    if (!state.isActive) dispatch(selectBlock([rowIndex, colIndex]));
   }
 
   return (
