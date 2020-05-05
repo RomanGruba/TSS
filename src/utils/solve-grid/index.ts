@@ -13,8 +13,8 @@ function solveGrid(grid: GRID) {
     col = i % 9;
 
     if (grid[row][col] === 0) {
-      for (let value of numbers)
-        if (!isInRow({ grid, row, value }))
+      for (let value of numbers) {
+        if (!isInRow({ grid, row, value })) {
           if (!isInCol({ col, grid, value })) {
             const square = identifySquare({ col, grid, row });
             if (!isInSquare({ square, value })) {
@@ -25,6 +25,9 @@ function solveGrid(grid: GRID) {
               } else if (solveGrid(grid)) return true;
             }
           }
+        }
+      }
+      break;
     }
   }
   grid[row][col] = 0;

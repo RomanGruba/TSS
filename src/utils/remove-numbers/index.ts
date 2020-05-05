@@ -17,6 +17,7 @@ function removeNumbers(grid: GRID, attempts = 5): GRID {
     const gridCopy = copyGrid(grid);
     global.counter = 0;
     solveGrid(gridCopy);
+    // console.log(gridCopy);
 
     if (global.counter !== 1) {
       grid[row][col] = backup;
