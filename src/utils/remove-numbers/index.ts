@@ -2,7 +2,7 @@ import { GRID } from "typings";
 import { copyGrid, getRandomIndex, solveGrid } from "utils";
 import global from "global";
 
-function removeNumbers(grid: GRID, attempts = 5): GRID {
+function removeNumbers(grid: GRID, attempts = 1): GRID {
   while (attempts > 0) {
     let row = getRandomIndex();
     let col = getRandomIndex();
