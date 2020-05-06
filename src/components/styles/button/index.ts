@@ -24,5 +24,8 @@ export const Button = styled.button`
       border-color: ${theme.colors.blue};
       outline: none;
     }
+    &:hover {
+      opacity: 0.6;
+    }
   `}
 `;
