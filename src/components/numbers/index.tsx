@@ -8,7 +8,6 @@ const Numbers: FC = () => {
     <Container className="">
       {([1, 2, 3, 4, 5, 6, 7, 8, 9] as NUMBERS[]).map((value) => (
         <Button key={value} value={value} />
-        // <button key={value}>{value}</button>
       ))}
     </Container>
   );
